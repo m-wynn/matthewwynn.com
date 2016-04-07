@@ -1,10 +1,35 @@
 # Site settings
-title: MatthewWynn.com
-description: > # this means to ignore newlines until "baseurl:"
-   Just a site for my things
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://matthewwynn.com" # the base hostname & protocol for your site
+name: Matthew Wynn
+description: "m_wynn"
+url: "http://matthewwynn.com"
+
+
+# Delete the lines you don't need
+# about 5 elements are recomended
 github_username:  m-wynn
+linkedin_username: wynnmatthew
+blog_url: "/blog"
+email: matthew@matthewwynn.com
+public_key_url: "http://matthewwynn.com/publickey.txt"
+
+
+avatar: yes
+#avatar_img_path: "imgs/avatar.jpg""
+# You can link to your GitHub image. That way it will get updated
+# automatically whenever you change your GitHub profile picture
+avatar_img_path: "https://avatars0.githubusercontent.com/u/2483388"
+
+
+front_img: yes
+front_img_path: "imgs/background.jpg"
+#front_img_path: "https://external.url/image.jpg"
+
+
+favicon_img: yes
+favicon_img_path: "imgs/favicon.ico"
+#favicon_img_path: "https://external.url/favicon.ico"
+
 
 # Build settings
 markdown: kramdown
+permalink: pretty
