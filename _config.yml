@@ -13,7 +13,7 @@ author:  # change following line to your infomation.
   name: Matthew Wynn  # Be used at blog posts' author.
   first_name: Matthew  # Be used at index page about me section.
   last_name: Wynn  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
+  avatar: /static/assets/img/landing/avatar.png  # upload your avatar at directory and edit it.
   github_username: m-wynn  # Leave blank if you don't have now
   linkedin_id: wynnmatthew # Leave blank if you don't have now
   facebook_username: matthewwynn0  # Leave blank if you don't have now
