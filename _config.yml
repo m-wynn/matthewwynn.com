@@ -1,35 +1,70 @@
-# Site settings
-name: Matthew Wynn
-description: "Graduate Honors student at University of Texas at Dallas, seeking a full-time position starting Summer 2018"
-url: "http://matthewwynn.com"
+# Welcome to Jekyll!
 
+# Website settings
+title: Matthew Wynn
+description: Matthew Wynn's Website! #What's up with highlighting in vim and single quotes in yaml
+keywords: Matthew,Wynn
+baseurl: #nothing
+url: https://mathewwynn.com  # url should be 'http://<github_username>.github.io/homepage' as before
+img_path: /static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
-# Delete the lines you don't need
-# about 5 elements are recomended
-github_username:  m-wynn
-linkedin_username: wynnmatthew
-facebook_username: matthew.wynn0
-email: matthew@matthewwynn.com
-public_key_url: "http://matthewwynn.com/publickey.txt"
+# author -- index page "about me" section
+author:  # change following line to your infomation.
+  name: Matthew Wynn  # Be used at blog posts' author.
+  first_name: Matthew  # Be used at index page about me section.
+  last_name: Wynn  # Be used at index page about me section.
+  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
+  github_username: m-wynn  # Leave blank if you don't have now
+  linkedin_id: wynnmatthew # Leave blank if you don't have now
+  facebook_username: matthewwynn0  # Leave blank if you don't have now
+  twitter_username: m_wynn_  # Leave blank if you don't have now
+  email: matthew@matthewwynn.com  # Leave blank if you don't have now
+  cv: # nothing
+  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
+  skill_icon1:
+    - name: fa-terminal
+    - name: fa-linux
 
+  skill_icon2:
+    - name: fa-code-fork
+    - name: fa-lock
+  desc: Graduate Honors student at University of Texas at Dallas, seeking a full-time position starting Summer 2018  # Describe yourself.
 
-avatar: yes
-#avatar_img_path: "imgs/avatar.jpg""
-# You can link to your GitHub image. That way it will get updated
-# automatically whenever you change your GitHub profile picture
-avatar_img_path: "https://avatars0.githubusercontent.com/u/2483388"
+# comment
+# disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
+#   name: jalpc
 
+# analytics
+## google analytics
+ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
+  # id:
 
-front_img: yes
-front_img_path: "imgs/background.jpg"
-#front_img_path: "https://external.url/image.jpg"
+## google optimize
+go:
+  # id:
 
+## growingIO
+gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
+  # id:
 
-favicon_img: yes
-favicon_img_path: "imgs/favicon.ico"
-#favicon_img_path: "https://external.url/favicon.ico"
+## donation
+donation: off  # type 'on'/'off' to choice display donation button at post page or not
 
+## carousels
+index_carousel: on  # index page carousel switch
+blog_carousel: on  # blog page carousel switch
+
+# scss
+sass:
+  style: compressed
 
 # Build settings
+encoding: utf-8
+
+# other settings
+highlighter: rouge
 markdown: kramdown
-permalink: pretty
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
