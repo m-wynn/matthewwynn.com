@@ -1,13 +1,3 @@
-_site
-.sass-cache
-
-/rt
-/schedule.html
-
-### Jekyll
-_site/
-.sass-cache/
-.jekyll-metadata
 
 ### Node
 # Logs

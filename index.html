@@ -1,68 +1,140 @@
----
-layout: blog
-title: index
-permalink: /
----
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="navbar-wrapper">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right" id="i18_navbar">
-          {% for section in site.data.landing %}
-          <li>
-            {% if section.page %}
-              <a class="page-scroll" href="{{ section.page}} ">
-            {% else %}
-              <a class="page-scroll" href="{{ section.id | prepend: '#'}} ">
-            {% endif %}
-              <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
-            </a>
-          </li>
-          {% endfor %}
-          {% for language in site.data.index.language %}
-          <li>
-            <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
-              <img src="{{ language.flag | prepend: site.baseurl }}" height="16" width="16">
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-{% if site.index_carousel %}
-{% include carousel.html %}
-{% endif %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css" rel="stylesheet">
 
-{% for section in site.data.landing %}
-{% assign loopindex = forloop.index | modulo: 2 %}
-<section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0;">
-  {% include sections/{{section.tpl}} %}
-</section>
-{% endfor %}
-<style>
-iframe {
-  -moz-transform: scale(0.25, 0.25);
-  -webkit-transform: scale(0.25, 0.25);
-  -o-transform: scale(0.25, 0.25);
-  -ms-transform: scale(0.25, 0.25);
-  transform: scale(0.25, 0.25);
-  -moz-transform-origin: top left;
-  -webkit-transform-origin: top left;
-  -o-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-}
-</style>
-<iframe src="https://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe>
+
+        <link rel="stylesheet" href="main.css">
+
+        <title>Matthew Wynn</title>
+    </head>
+    <body>
+        <section class="jumbotron jumbotron-fluid d-flex align-items-center parallax-window" data-parallax data-pos-x="left" data-src="./assets/hero.jpg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h1 class="display-3 text-white font-weight-bold">Matthew Wynn</h1>
+                </div>
+                <hr>
+                <div class="row justify-content-center">
+                    <h2 class="text-white font-weight-bold">Graduate Honors Student at The University of Texas at Dallas</h1>
+                </div>
+                <div class="bottom-scroll-indicator justify-content-center">
+                    <h2 class="text-white">^</h2>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h2>About Me</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <span class="devicons devicons-git"></span>
+                    </div>
+                    <div class="col text-center">
+                        <span class="devicons devicons-linux"></span>
+                    </div>
+                    <div class="col text-center">
+                        <span class="devicons devicons-vim"></span>
+                    </div>
+                    <div class="col align-middle">
+                        <img class="rounded-circle mx-auto d-block" width="100px" src="assets/avatar.jpg">
+                    </div>
+                    <div class="col text-center">
+                        <span class="devicons devicons-rust"></span>
+                    </div>
+                    <div class="col text-center">
+                        <span class="devicons devicons-terminal"></span>
+                    </div>
+                    <div class="col text-center">
+                        <span class="devicons devicons-python"></span>
+                    </div>
+                </div>
+                <br/>
+                <div class="row justify-content-center" style="font-size: 24px">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-gitlab"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-envelope"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-newspaper"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fa fa-key"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="some-class" data-src="assets/laptop.jpg" data-pos-x="right" data-parallax style="height: 300px;">
+        </div>
+        <section class="projects">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h2>Some of my projects</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Name</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque in orci quis efficitur. Etiam ultricies, erat sit amet venenatis elementum, nibh nunc tempus metus, eu maximus massa erat quis justo. Proin sagittis justo nibh, a gravida metus dictum id. Mauris pellentesque quis felis vel sodales. Phasellus suscipit faucibus augue. </p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Name</h5>
+                                <p class="card-text">Yet another a wonderful project</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Project Name</h5>
+                                <p class="card-text">This one is my favorite, actually</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+        </section>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <script src="parallax.min.js"></script>
+    </body>
+</html>
